@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #090807;
+    color: #F5EFE6;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-image: 
+      radial-gradient(circle at 15% 10%, rgba(224, 90, 43, 0.06) 0%, transparent 40%),
+      radial-gradient(circle at 85% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 45%);
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #090807;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #241E1A;
+    border-radius: 9999px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #E05A2B;
+  }
+}
+
+@layer utilities {
+  .ornate-border {
+    border: 1px solid rgba(212, 175, 55, 0.22);
+  }
+  .ornate-card {
+    background: linear-gradient(180deg, rgba(24, 20, 17, 0.92) 0%, rgba(15, 13, 11, 0.98) 100%);
+    border: 1px solid rgba(212, 175, 55, 0.16);
+  }
+}
